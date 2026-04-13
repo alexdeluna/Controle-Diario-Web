@@ -1,12 +1,9 @@
 // ============================================================
-// CONTROLE DIÁRIO — APP.JS
+// CONTROLE DIÁRIO — APP.JS Alex de Luna Informática 13/04/2026
 // Arquitetura organizada do sistema
 // ============================================================
-
 /*
-
 SEÇÕES DO ARQUIVO
-
 1. INICIALIZAÇÃO DO APP
 2. UTILIDADES
 3. NAVEGAÇÃO DE TELAS
@@ -17,9 +14,7 @@ SEÇÕES DO ARQUIVO
 8. EXPORTAÇÕES
 9. METAS
 10. EVENTOS E BOTÕES
-
 */
-
 // ==========================================
 // NÚCLEO PROTEGIDO — IMPORTAÇÕES PRINCIPAIS
 // NÃO REMOVER NESTA ETAPA DE LIMPEZA
