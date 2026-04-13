@@ -838,6 +838,10 @@ if (btnGoogle) {
     usuarioAtual = user;
 
     if (user) {
+
+		document.getElementById("screen-login").classList.add("hidden");
+        document.getElementById("menu-principal").classList.remove("hidden");
+
         showScreen(screens.menu);
 		
 		await gerenciarEstadoInterface();
@@ -845,28 +849,20 @@ if (btnGoogle) {
         await atualizarListaAbastecimentosFirestoreUI();
         await atualizarListaOutrosCustosFirestoreUI();
 		await atualizarResumoGeral();
-
 		const areaUsuario = document.getElementById("usuarioLogado");
-
-if (areaUsuario) {
-  const nome = user.displayName || "";
-  const email = user.email || "";
-
-  areaUsuario.textContent = nome
-    ? `👤 ${nome} (${email})`
-    : `👤 ${email}`;
-}
-		
-    } else {
+			if (areaUsuario) {
+	  				const nome = user.displayName || "";
+	  				const email = user.email || "";
+	 				 areaUsuario.textContent = nome
+	    			? `👤 ${nome} (${email})`
+	    			: `👤 ${email}`;
+			}
+					
+	} else {
 		turnoAtivoAtual = null;
         showScreen(screens.login);
     }
 
-	const campoUsuario = document.getElementById("usuarioLogado");
-
-if (user && campoUsuario) {
-  campoUsuario.textContent = user.email;
-}	
 });
 
 const btnLogout = document.getElementById('btn-logout');
