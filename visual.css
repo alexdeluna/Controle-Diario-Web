@@ -40,7 +40,8 @@ body { background: var(--bg); color: var(--text); font-family: system-ui, sans-s
 .btn-danger { background-color: var(--red); color: #fff; }
 .btn-back { background-color: var(--gray); color: #fff; }
 .btn-secondary { background-color: var(--gray); color: #fff; padding: 0 15px; border-radius: 12px; }
-.btn-google{ background-color: #ffffff; color: #333; padding: 0 15px; border-radius: 12px; }
+.btn-google { background-color: #ffffff; color: #333; padding: 0 15px; border-radius: 12px; }
+
 
 /* NOVOS ESTILOS: CARDS DE RESUMO/HISTÓRICO */
 .resumo-card {
