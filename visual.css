@@ -41,6 +41,19 @@ body { background: var(--bg); color: var(--text); font-family: system-ui, sans-s
 .btn-back { background-color: var(--gray); color: #fff; }
 .btn-secondary { background-color: var(--gray); color: #fff; padding: 0 15px; border-radius: 12px; }
 .btn-warning2 { background-color: #ffffff; color: #000000; }
+.btn-google{
+  background:#ffffff;
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+
+.btn-google img{
+  width:18px;
+  height:18px;
+}
 
 
 
