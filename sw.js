@@ -35,12 +35,23 @@ self.addEventListener('activate', event => {
 });
 
 // Fetch
-self.addEventListener('fetch', event => {
+self.addEventListener("fetch", (event) => {
+
+  const url = new URL(event.request.url);
+
+  // NÃO interceptar Firebase/Auth/Google
+  if (
+    url.origin.includes("firebase") ||
+    url.origin.includes("googleapis") ||
+    url.origin.includes("gstatic")
+  ) {
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request).then(response => {
+    caches.match(event.request).then((response) => {
       return response || fetch(event.request);
     })
   );
 
 });
-
