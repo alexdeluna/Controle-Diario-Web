@@ -4,10 +4,14 @@ import {
   onAuthStateChanged,
   signOut,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  setPersistence,
+  browserLocalPersistence
 } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-auth.js";
 
 import { auth } from "./firebase-config.js";
+
+await setPersistence(auth, browserLocalPersistence);
 
 export async function registrar(email, senha) {
   return await createUserWithEmailAndPassword(auth, email, senha);
