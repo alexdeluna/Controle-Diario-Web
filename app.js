@@ -845,6 +845,18 @@ if (btnGoogle) {
         await atualizarListaAbastecimentosFirestoreUI();
         await atualizarListaOutrosCustosFirestoreUI();
 		await atualizarResumoGeral();
+
+		const areaUsuario = document.getElementById("usuarioLogado");
+
+if (areaUsuario) {
+  const nome = user.displayName || "";
+  const email = user.email || "";
+
+  areaUsuario.textContent = nome
+    ? `👤 ${nome} (${email})`
+    : `👤 ${email}`;
+}
+		
     } else {
 		turnoAtivoAtual = null;
         showScreen(screens.login);
