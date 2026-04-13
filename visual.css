@@ -102,3 +102,9 @@ hr { border: 0; border-top: 1px solid var(--gray); margin: 10px 0; }
   border-radius: 16px;
   margin-top: 20px;
 }
+
+.usuario-logado{
+  font-size:14px;
+  opacity:0.8;
+  margin-bottom:10px;
+}
