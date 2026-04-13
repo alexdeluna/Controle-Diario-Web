@@ -781,16 +781,17 @@ function configurarLogin() {
     const btnEntrar = document.getElementById('btn-entrar');
     const btnRegistrar = document.getElementById('btn-registrar');
     const status = document.getElementById('login-status');
-	const btnGoogleLogin = document.getElementById("btnGoogleLogin");
+	const btnGoogle = document.getElementById('btn-entrarComGoogle');
 
-if (btnGoogleLogin) {
-  btnGoogleLogin.onclick = async () => {
-    try {
-      await entrarComGoogle();
-    } catch (error) {
-      console.error("Erro login Google:", error);
-    }
-  };
+if (btnGoogle) {
+    btnGoogle.onclick = async () => {
+        try {
+            status.textContent = "Abrindo login Google...";
+            await entrarComGoogle();
+        } catch (erro) {
+            status.textContent = "Erro no login Google: " + erro.message;
+        }
+    };
 }
 
     if (btnEntrar) {
