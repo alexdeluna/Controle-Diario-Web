@@ -19,7 +19,7 @@ SEÇÕES DO ARQUIVO
 // NÚCLEO PROTEGIDO — IMPORTAÇÕES PRINCIPAIS
 // NÃO REMOVER NESTA ETAPA DE LIMPEZA
 // ==========================================
-import { entrar, registrar, sair, observarUsuario, entrarComGoogle } from "./auth.js";
+import { registrar, entrar, observarUsuario, sair, entrarComGoogle } from "./auth.js";
 import {
   salvarAbastecimentoFirestore,
   listarAbastecimentosFirestore,
