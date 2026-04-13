@@ -853,6 +853,12 @@ if (btnGoogleLogin) {
 		turnoAtivoAtual = null;
         showScreen(screens.login);
     }
+
+	const campoUsuario = document.getElementById("usuarioLogado");
+
+if (user && campoUsuario) {
+  campoUsuario.textContent = user.email;
+}	
 });
 
 const btnLogout = document.getElementById('btn-logout');
