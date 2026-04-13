@@ -17,11 +17,6 @@ export async function entrar(email, senha) {
   return await signInWithEmailAndPassword(auth, email, senha);
 }
 
-const provider = new GoogleAuthProvider();
-
-export async function entrarComGoogle() {
-  return await signInWithPopup(auth, provider);
-}
 
 export function observarUsuario(callback) {
   return onAuthStateChanged(auth, callback);
@@ -29,4 +24,9 @@ export function observarUsuario(callback) {
 
 export async function sair() {
   return await signOut(auth);
+}
+
+export async function entrarComGoogle() {
+  const provider = new GoogleAuthProvider();
+  return await signInWithPopup(auth, provider);
 }
