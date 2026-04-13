@@ -40,7 +40,7 @@ body { background: var(--bg); color: var(--text); font-family: system-ui, sans-s
 .btn-danger { background-color: var(--red); color: #fff; }
 .btn-back { background-color: var(--gray); color: #fff; }
 .btn-secondary { background-color: var(--gray); color: #fff; padding: 0 15px; border-radius: 12px; }
-.btn-secondary2 { background-color: var(--gray); color: #333; padding: 0 15px; border-radius: 12px; }
+.btn-warning2 { background-color: var(--orange); color: #333; }
 
 
 
