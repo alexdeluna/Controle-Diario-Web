@@ -1,0 +1,173 @@
+Projeto: PWA de controle de diário, custos e resultados para motorista
+
+Stack:
+
+* HTML, CSS, JavaScript puro
+* Firebase Auth
+* Firestore
+
+Arquivos principais:
+
+* app.js
+* auth.js
+* db.js
+* index.html
+* style.css
+
+---
+
+ESTADO ATUAL DO PROJETO
+
+* Login e registro funcionando com Firebase Auth
+* Sessão persistente ativa
+* Logout funcionando
+* Navegação entre telas funcionando
+* Turnos sendo iniciados e finalizados
+* Abastecimentos cadastrados
+* Outros custos cadastrados
+* Resumo diário funcionando parcialmente
+* Histórico geral implementado
+* Metas implementadas
+* Exportação PDF/CSV implementada
+* Banco de teste implementado
+
+---
+
+ARQUITETURA ATUAL (IMPORTANTE)
+
+O projeto está em estado híbrido:
+
+🔵 Núcleo (produção)
+
+* Firebase Auth
+* Firestore (turnos, abastecimentos, custos)
+
+🟡 Legado
+
+* localStorage ainda utilizado em partes do sistema
+* principalmente relatórios, exportações e funções antigas
+
+🔴 Temporário
+
+* Banco de teste (uso apenas para desenvolvimento)
+
+---
+
+REGRA GLOBAL OBRIGATÓRIA (TEMPORÁRIOS)
+
+TODO código temporário DEVE conter EXATAMENTE o comentário:
+
+"TEMP DEVE SER APAGADO NA VERSÃO FICAL"
+
+Regras:
+
+* aplicar esse texto em TODAS as funções, variáveis e blocos temporários
+* usar comentários visíveis no código
+* garantir que seja possível encontrar tudo via busca
+
+---
+
+BANCO DE TESTE (MÓDULO TEMPORÁRIO)
+
+O banco de teste deve:
+
+* ser tratado como funcionalidade temporária
+* não fazer parte do produto final
+* ficar totalmente isolado do núcleo do sistema
+* não interferir na lógica principal
+
+Regras obrigatórias:
+
+* tudo relacionado ao banco de teste deve conter:
+  "TEMP DEVE SER APAGADO NA VERSÃO FICAL"
+* nomes de funções devem ser claros (ex: gerarDadosTeste, removerDadosTeste)
+* não misturar lógica de teste com lógica real
+* não criar dependências ocultas
+
+---
+
+MODO DE TRABALHO (OBRIGATÓRIO)
+
+Sempre seguir estas regras:
+
+1. NÃO quebrar funcionalidades existentes
+2. Trabalhar de forma incremental (passo a passo)
+3. Antes de alterar código, analisar impacto
+4. Evitar refatorações grandes sem necessidade
+5. Priorizar estabilidade do sistema
+6. Sempre avisar riscos antes de mudanças
+7. Sempre respeitar separação entre:
+
+   * núcleo
+   * legado
+   * temporário
+
+---
+
+OBJETIVO DO PROJETO AGORA
+
+* Consolidar uso do Firestore
+* Reduzir dependência de localStorage
+* Corrigir inconsistências entre funções antigas e novas
+* Melhorar a tela "acompanhando resultados"
+* Manter o sistema estável
+
+---
+
+PENDÊNCIAS IDENTIFICADAS
+
+1. Mistura entre Firestore e localStorage
+2. Relatórios ainda dependem de estruturas antigas
+3. Banco de teste precisa continuar isolado
+4. Possíveis inconsistências de funções
+5. Necessidade de padronização do código
+
+---
+
+REGRAS DE EVOLUÇÃO
+
+* Sempre identificar:
+  ✔ o que é núcleo
+  ✔ o que é legado
+  ✔ o que é temporário
+
+* Sempre manter código removível quando for temporário
+
+---
+
+CHECKLIST FUTURO (EXCLUSÃO DO BANCO DE TESTE)
+
+Quando for remover o banco de teste, seguir:
+
+[ ] Buscar por: "TEMP DEVE SER APAGADO NA VERSÃO FICAL"
+[ ] Remover todas as funções de geração de dados teste
+[ ] Remover funções de exclusão de dados teste
+[ ] Remover botões relacionados no HTML
+[ ] Remover eventos vinculados aos botões
+[ ] Remover chamadas dessas funções no fluxo do app
+[ ] Garantir que nenhuma tela dependa desses dados
+[ ] Testar login, menu, turnos e relatórios após remoção
+[ ] Validar que apenas dados reais permanecem
+
+---
+
+INÍCIO DO TRABALHO
+
+Primeira tarefa:
+
+Analise o estado atual do projeto e me entregue:
+
+1. O que já está 100% em Firestore
+2. O que ainda depende de localStorage
+3. O que é núcleo do sistema
+4. O que é legado
+5. O que é temporário (especialmente banco de teste)
+6. Qual a melhor ordem de refatoração segura
+
+---
+
+IMPORTANTE
+
+Sempre considerar este contexto antes de qualquer resposta.
+Não assumir mudanças sem validar impacto.
+Priorizar organização, clareza e segurança do código.
